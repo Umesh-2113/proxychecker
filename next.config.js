@@ -1,6 +1,10 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
+// next.config.js
+module.exports = {
+  // Temporarily disable CSS minification
+  webpack: (config, { isServer }) => {
+    if (!isServer) {
+      config.optimization.minimize = false;
+    }
+    return config;
+  },
 };
-
-module.exports = nextConfig;
