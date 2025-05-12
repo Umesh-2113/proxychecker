@@ -218,78 +218,78 @@ export default function Home() {
 
           {/* Result Popup */}
           {showResultPopup && (
-            <div className="popup-overlay" onClick={closeResultPopup}>
-              <div className="result-popup" onClick={(e) => e.stopPropagation()}>
-                <div className={`result-popup-icon ${isSuccess ? 'success-icon' : 'error-icon'}`}>
-                  {isSuccess ? (
-                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                      <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                    </svg>
-                  ) : (
-                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <circle cx="12" cy="12" r="10"></circle>
-                      <line x1="15" y1="9" x2="9" y2="15"></line>
-                      <line x1="9" y1="9" x2="15" y2="15"></line>
-                    </svg>
-                  )}
-                </div>
-                <h3 className="result-popup-title">
-                  {isSuccess ? "Proxy Status" : "Proxy Not Working"}
-                </h3>
-                <p className="result-popup-message">{result}</p>
-                {isSuccess && (
-                  <div className="result-popup-details">
-                    <div className="detail-item">
-                      <span className="detail-label">Status:</span>
-                      <span className="detail-value">Active</span>
-                    </div>
-                    <div className="detail-item">
-                      <span className="detail-label">City:</span>
-                      <span className="detail-value">{proxyDetails.city}</span>
-                    </div>
-                    <div className="detail-item">
-                      <span className="detail-label">Region:</span>
-                      <span className="detail-value">{proxyDetails.region}</span>
-                    </div>
-                    <div className="detail-item">
-                      <span className="detail-label">Country:</span>
-                      <span className="detail-value">{proxyDetails.country}</span>
-                    </div>
-                    <div className="detail-item">
-                      <span className="detail-label">Timezone:</span>
-                      <span className="detail-value">{proxyDetails.timezone}</span>
-                    </div>
-                    <div className="detail-item org-item">
-                      <span className="detail-label">Organization:</span>
-                      <span className="detail-value org-value">{proxyDetails.org}</span>
-                    </div>
-                    <div className="detail-item">
-                      <span className="detail-label">Exit IP:</span>
-                      <span className="detail-value">{proxyDetails.exitIp}</span>
-                    </div>
-                    <div className="detail-item">
-                      <span className="detail-label">Latency:</span>
-                      <span className="detail-value">{Math.floor(Math.random() * 200) + 50}ms</span>
-                    </div>
-                  </div>
-                )}
-                
-                {!isSuccess && (
-                  <div className="proxy-ad-in-popup">
-                    <p className="proxy-ad-text">Need reliable proxies? Check out our premium options!</p>
-                    <button className="proxy-ad-button" onClick={goToProxyStore}>
-                      Get Premium Proxies
-                    </button>
-                  </div>
-                )}
-                
-                <button className="popup-close-button" onClick={closeResultPopup}>
-                  Close
-                </button>
-              </div>
-            </div>
-          )}
+  <div className="popup-overlay" onClick={closeResultPopup}>
+    <div className="result-popup" onClick={(e) => e.stopPropagation()}>
+      <div className={`result-popup-icon ${isSuccess ? 'success-icon' : 'error-icon'}`}>
+        {isSuccess ? (
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+          </svg>
+        ) : (
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="15" y1="9" x2="9" y2="15"></line>
+            <line x1="9" y1="9" x2="15" y2="15"></line>
+          </svg>
+        )}
+      </div>
+      <h3 className="result-popup-title">
+        {isSuccess ? "Proxy Status" : "Proxy Not Working"}
+      </h3>
+      <p className="result-popup-message">{result}</p>
+      {isSuccess && (
+        <div className="result-popup-details">
+          <div className="detail-item">
+            <span className="detail-label">Status:</span>
+            <span className="detail-value">Active</span>
+          </div>
+          <div className="detail-item">
+            <span className="detail-label">City:</span>
+            <span className="detail-value">{proxyDetails.city}</span>
+          </div>
+          <div className="detail-item">
+            <span className="detail-label">Region:</span>
+            <span className="detail-value">{proxyDetails.region}</span>
+          </div>
+          <div className="detail-item">
+            <span className="detail-label">Country:</span>
+            <span className="detail-value">{proxyDetails.country}</span>
+          </div>
+          <div className="detail-item">
+            <span className="detail-label">Timezone:</span>
+            <span className="detail-value">{proxyDetails.timezone}</span>
+          </div>
+          <div className="detail-item org-item">
+            <span className="detail-label">Organization:</span>
+            <span className="detail-value org-value">{proxyDetails.org}</span>
+          </div>
+          <div className="detail-item">
+            <span className="detail-label">Exit IP:</span>
+            <span className="detail-value">{proxyDetails.exitIp}</span>
+          </div>
+          <div className="detail-item">
+            <span className="detail-label">Latency:</span>
+            <span className="detail-value">{Math.floor(Math.random() * 200) + 50}ms</span>
+          </div>
+        </div>
+      )}
+      
+      {!isSuccess && (
+        <div className="proxy-ad-in-popup">
+          <p className="proxy-ad-text">Need reliable proxies? Check out our premium options!</p>
+          <button className="proxy-ad-button" onClick={goToProxyStore}>
+            Get Premium Proxies
+          </button>
+        </div>
+      )}
+      
+      <button className="popup-close-button" onClick={closeResultPopup}>
+        Close
+      </button>
+    </div>
+  </div>
+)}
 
           <div className="card-footer">
             <div className="pulse-circle"></div>
